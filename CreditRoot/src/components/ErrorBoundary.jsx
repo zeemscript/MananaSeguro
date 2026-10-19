@@ -1,22 +1,23 @@
 // src/components/ErrorBoundary.jsx
-//
+// 
 // Error Boundary global de la app.
-//
+// 
 // React requiere que los Error Boundaries sean componentes de clase: los
 // hooks (useState/useEffect) NO pueden capturar errores de renderizado de los
 // hijos. Por eso este componente es una clase y no una función.
-//
+// 
 // Captura cualquier error que se lance durante el render / lifecycle de los
 // componentes hijos (p. ej. DepositFlow o WithdrawalFlow cuando el polling
 // contra /api/etherfuse/order-status devuelve una forma inesperada) y muestra
 // una pantalla de respaldo amigable en lugar de dejar la app en blanco.
-//
+// 
 // Props:
-//   children — árbol a proteger
-//   onReset  — (opcional) callback extra al pulsar "Reintentar"
+// children , árbol a proteger
+// onReset  , (opcional) callback extra al pulsar "Reintentar"
 
 import { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { TriangleAlert } from 'lucide-react'
 import i18n from '../i18n/index.js'
 
 export class ErrorBoundary extends Component {
@@ -37,7 +38,7 @@ export class ErrorBoundary extends Component {
     console.error('[ErrorBoundary] Componente capturado:', error, errorInfo)
 
     // TODO(Sentry): reportar a Sentry cuando esté configurado, p. ej.
-    //   Sentry.captureException(error, { extra: { componentStack: errorInfo?.componentStack } })
+    // Sentry.captureException(error, { extra: { componentStack: errorInfo?.componentStack } })
 
     this.setState({ errorInfo })
   }
@@ -67,8 +68,8 @@ export class ErrorBoundary extends Component {
             role="alert"
             className="max-w-md w-full bg-white dark:bg-white/5 border border-ink/8 dark:border-white/8 rounded-2xl p-7 flex flex-col gap-5 text-center shadow-lg"
           >
-            <div className="w-16 h-16 mx-auto rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-3xl">
-              ⚠️
+            <div className="w-16 h-16 mx-auto rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <TriangleAlert size={32} aria-hidden="true" className="text-red-500" />
             </div>
 
             <div>

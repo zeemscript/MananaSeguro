@@ -7,18 +7,25 @@
     "iniciarSesion": "Sign in",
     "comenzarGratis": "Get started",
     "volverInicio": "← Back to home",
-    "cerrarSesion": "Sign out"
+    "cerrarSesion": "Sign out",
+    "logoAlt": "Mañana Seguro logo",
+    "marca": "Mañana",
+    "marcaAccent": "Seguro",
+    "cambiarIdioma": "Change language",
+    "activarModoClaro": "Enable light mode",
+    "activarModoOscuro": "Enable dark mode",
+    "toggleMenu": "Toggle menu"
   },
   "landing": {
     "badge": "Retirement savings · CETES · Mexico",
     "titulo": "Your retirement,",
     "tituloAccent": "in your hands.",
-    "descripcion": "Save from $40 pesos/month with real CETES yield. Transfer from your bank — just like paying any bill.",
+    "descripcion": "Save from $40 pesos/month with real CETES yield. Transfer from your bank, just like paying any bill.",
     "puntos": {
       "apy": "~{{apy}}% net APY (real CETES rate via Etherfuse)",
       "fondos": "Your money earns real yield — nobody can touch it",
       "prestamo": "Emergency autoloan up to 30% without breaking your savings",
-      "spei": "Deposit from your bank via SPEI — no crypto, no installs"
+      "spei": "Deposit from your bank via SPEI, no crypto, no installs"
     },
     "comenzar": "Get started →",
     "yaTengo": "I already have an account",
@@ -47,7 +54,7 @@
       "titulo": "Your retirement starts",
       "tituloAccent": "today.",
       "descripcion": "No bank, no intermediaries. The Soroban contract guarantees your funds are safe and earning real yield.",
-      "crear": "Create free account →",
+      "crear": "Create free account",
       "yaTengo": "I already have an account",
       "trust": "No credit card · 100% on-chain"
     },
@@ -65,16 +72,19 @@
   "calc": {
     "proyeccion": "Projection at {{anios}} years",
     "apy": "MXN · at {{apy}}% net APY",
-    "tasaVivo": "Live CETES rate · {{rate}}% gross",
-    "tasaRef": "Reference rate · {{rate}}%",
+    "tasaVivo": "Reference rate {{rate}}%",
+    "tasaRef": "Reference rate {{rate}}%",
     "cargando": "Loading rate...",
     "aporteLabel": "Monthly savings",
     "tiempoLabel": "Savings period",
-    "empezar": "Start saving →",
+    "empezar": "Create an account",
     "aniosSufijo": "years",
     "min": "1 year",
     "max": "40 years",
-    "apyMxn": "Mexican pesos · at {{apy}}% net APY"
+    "apyMxn": "Mexican pesos · at {{apy}}% net APY",
+    "mascotaAlt": "Mañana Seguro mascot",
+    "yaTienesCuenta": "Already have an account?",
+    "iniciarSesion": "Sign in"
   },
   "auth": {
     "badge": "Your retirement, in your hands",
@@ -84,18 +94,9 @@
     "tituloNombreAccent": "call you?",
     "descWallet": "No passwords or installs. Just your Google email and you're ready.",
     "descNombre": "Just your email. No banks, no paperwork.",
-    "conectar": "Connect Freighter",
     "conectando": "Connecting...",
-    "noFreighter": "Don't have Freighter?",
-    "instalar": "Install Freighter",
-    "walletConectada": "Wallet connected",
-    "nombreLabel": "Your name",
-    "nombrePlaceholder": "E.g. María González",
-    "entrar": "Enter",
-    "cambiarWallet": "Use another wallet",
     "continuarGoogle": "Continue with Google",
     "continuarEmail": "Continue with email",
-    "usarFreighter": "Use Freighter (advanced)",
     "paso1": "Sign in with Google",
     "paso2": "Verify your identity (KYC)",
     "paso3": "Register your bank CLABE",
@@ -103,12 +104,177 @@
     "trust1": "No password",
     "trust2": "30 seconds",
     "trust3": "SPEI deposit",
-    "opcionesAvanzadas": "advanced options"
+    "errorSinCredencial": "No credential received from Google. Try again.",
+    "errorLogin": "Error signing in",
+    "errorLoginReintentar": "Error signing in. Try again.",
+    "errorConfig": "Configuration error — contact the Mañana Seguro team",
+    "errorGoogleCarga": "Could not load Google. Check your connection.",
+    "errorCampoRequerido": "{{campo}} required",
+    "heroTitulo": "Start saving",
+    "heroTituloAccent": "in 30 seconds.",
+    "mascotaAlt": "Mañana Seguro mascot",
+    "registro": {
+      "tituloDatos": "Personal",
+      "tituloPersonales": "information",
+      "descripcion": "To create your account, we need some personal information.",
+      "datosSeguros": "Your data, protected",
+      "descripcionSeguridad": "All the information you share is protected by the highest security standards.",
+      "procesoRapido": "A quick process",
+      "descripcionRapido": "Complete your registration in under 3 minutes and access all your account benefits.",
+      "tituloFormulario": "Sign up in minutes",
+      "alertTitle": "Error",
+      "nombre": "First name(s)*",
+      "apellidoPaterno": "Last name*",
+      "apellidoMaterno": "Second last name*",
+      "seleccionarPais": "Select country",
+      "telefono": "Phone number*",
+      "buscarPais": "Search country or calling code",
+      "email": "Email address*",
+      "password": "Password*",
+      "confirmarPassword": "Confirm your password*",
+      "acepto": "I accept the",
+      "autorizacion": "and authorize the processing of my data to create my account.",
+      "creandoCuenta": "Creating account...",
+      "continuar": "Continue",
+      "politicaIntro": "Learn how we handle your data in our",
+      "errorCampos": "Enter your name, last names, email, password, and phone number to continue.",
+      "errorPassword": "The passwords do not match.",
+      "errorTerminos": "You must accept the terms and conditions to create your account.",
+      "errorCrear": "Could not create your account.",
+      "errorReintentar": "Could not create your account. Please try again."
+    }
+  },
+  "quickConnect": {
+    "titulo": "Quick",
+    "tituloAccent": "connect",
+    "descripcion": "Connect an account to designate a beneficiary in case of death using your MsID.",
+    "msId": "MsID",
+    "msIdPlaceholder": "Enter the MsID",
+    "ejemplo": "Example",
+    "aceptarBeneficio": "I agree to grant my generated benefit to the person associated with this MsID.",
+    "otorgarBeneficio": "Grant benefit",
+    "requestReady": "The request is ready to connect to the backend.",
+    "aviso": "You can change your beneficiary later in settings. Changes are subject to security review."
+  },
+  "changePassword": {
+    "back": "Back",
+    "forgot": "Need to change your password?",
+    "title": "Change your",
+    "titleAccent": "password",
+    "description": "Verify it is you, then change your password to a secure one.",
+    "cardTitle": "Password change",
+    "cardSubtitle": "Enter your new key to secure your account",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "showPassword": "Show or hide password",
+    "showConfirmPassword": "Show or hide password confirmation",
+    "requirementsTitle": "Your password must include",
+    "requirements": {
+      "length": "At least 12 characters",
+      "uppercase": "An uppercase letter",
+      "lowercase": "A lowercase letter",
+      "number": "A number",
+      "symbol": "A symbol (for example: !, #, $)"
+    },
+    "passwordsMatch": "Passwords match",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "requestReady": "The request is ready to connect to the password-change service.",
+    "submit": "Change password"
+  },
+  "emergencyWithdrawal": {
+    "brand": "We are",
+    "brandAccent": "MañanaSeguro.",
+    "title": "Emergency",
+    "titleAccent": "withdrawal",
+    "accountLabel": "Main account",
+    "availableLabel": "Available",
+    "rateLabel": "CETES asset",
+    "stepOne": "Step 1: Select amount to withdraw:",
+    "stepTwo": "Step 2: Select the months to pay back your contribution:",
+    "optionLabel": "months",
+    "disposable": "30% available",
+    "terms": "I accept the terms and conditions of use",
+    "submit": "Access emergency withdrawal",
+    "statusLabel": "Request ready",
+    "statusMessage": "The request is ready to be sent to the backend when the integration is connected.",
+    "availableExplanation": "Amount available for emergency withdrawal. This value is used as the basis for the 30% calculation.",
+    "termDetails": "Each month deferred reduces the yield by 1% for one year."
+  },
+  "settings": {
+    "back": "Back",
+    "openProfile": "Open profile and settings",
+    "goHome": "Go to Mañana Seguro home",
+    "avatarAlt": "Mañana Seguro profile avatar",
+    "namePlaceholder": "[First name]",
+    "lastNamePlaceholder": "[Last name]",
+    "title": "Your",
+    "titleAccent": "Profile",
+    "signOutLabel": "Sign out",
+    "signOut": "Sign out of this session",
+    "menuTitle": "Settings",
+    "actionReady": "{{action}} selected. The action is ready to connect to the backend.",
+    "actions": {
+      "profile": "Your profile information",
+      "privacy": "Privacy and security",
+      "help": "Help center",
+      "history": "Transaction history",
+      "msid": "MsID code",
+      "wallet": "Wallet and authentication",
+      "about": "About"
+    }
+  },
+  "about": {
+    "back": "Back",
+    "goHome": "Go to Mañana Seguro home",
+    "promise1": "Your money,",
+    "promiseAccent1": "your rules.",
+    "promise2": "Your",
+    "promiseAccent2": "future,",
+    "promise3": "your",
+    "promiseAccent3": "retirement.",
+    "title": "About",
+    "company": "Mañana Seguro S.A. de C.V.",
+    "developedBy": "Developed by",
+    "teamTitle": "Development team",
+    "team": {
+      "member1": {
+        "name": "Daniel Rosales",
+        "role": "Co-Founder, Product Developer & UI Mobile Designer"
+      },
+      "member2": {
+        "name": "Renata Ortiz",
+        "role": "Co-Founder, Product Developer & UI Mobile Designer"
+      },
+      "member3": {
+        "name": "Ulises Campuzano",
+        "role": "Co-Founder & Web Developer"
+      },
+      "member4": {
+        "name": "Bernardo González",
+        "role": "Co-Founder & Mobile Developer"
+      },
+      "member5": {
+        "name": "Davor Barrera",
+        "role": "Co-Founder & Web Developer"
+      }
+    },
+    "partners": "Our partners",
+    "socialTitle": "Social media"
   },
   "footer": {
     "stellar": "Built on Stellar",
     "etherfuse": "Powered by Etherfuse",
-    "hackathon": "Genesis Hackathon 2026"
+    "hackathon": "Genesis Hackathon 2026",
+    "derechos": "© {{year}} Mañana Seguro. All rights reserved.",
+    "privacidad": "Privacy notice",
+    "terminos": "Terms and conditions",
+    "social": {
+      "x": "X / Twitter",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "correo": "Email"
+    }
   },
   "home": {
     "badge": "🔒 Retirement savings · Etherfuse CETES · Stellar",
@@ -122,7 +288,10 @@
       "rendimiento": "Annual CETES yield",
       "empezar": "To get started",
       "comision": "Platform fee"
-    }
+    },
+    "descripcionIntro": "Connect your bank account, start saving via SPEI from $100 pesos.",
+    "cetesEnVivo": "Live CETES · {{rate}}% gross via Banxico",
+    "tipoCambio": "Exchange rate · ${{rate}} MXN/USD via Banxico"
   },
   "dashboard": {
     "badge": "Dashboard · Mañana Seguro",
@@ -143,29 +312,29 @@
     "flujoCompleto": "The full flow",
     "pasos": [
       {
-        "icon": "💵",
+        "icon": "🏦",
         "step": "You deposit from your bank",
         "desc": "From $40 MXN via SPEI, whenever you want"
       },
       {
-        "icon": "🔒",
-        "step": "Contract locks",
-        "desc": "Soroban on Stellar testnet"
+        "icon": "🔐",
+        "step": "Etherfuse holds your savings",
+        "desc": "Backed by Mexican government CETES"
       },
       {
         "icon": "📈",
-        "step": "Etherfuse yields",
-        "desc": "{{apy}}% APY in pesos via CETES"
+        "step": "Etherfuse pays yield",
+        "desc": "{{apy}}% net APY in pesos via CETES"
       },
       {
         "icon": "🎁",
-        "step": "Incentives every 5y",
-        "desc": "Up to 7% extra for loyalty"
+        "step": "Incentives every 5 years",
+        "desc": "Up to 9% extra for loyalty"
       },
       {
-        "icon": "🏆",
-        "step": "Withdraw on arrival",
-        "desc": "Everything to your wallet, no bank"
+        "icon": "👤",
+        "step": "You withdraw when ready",
+        "desc": "Straight to your bank account, no middleman bank"
       }
     ],
     "verificandoTitulo": "Verifying your retirement goal",
@@ -210,7 +379,25 @@
     "exitosoTxTitulo": "✅ Transaction confirmed on Stellar",
     "exitosoTxLink": "View on Stellar Expert → ",
     "errorTitulo": "Something went wrong",
-    "errorReintentar": "Try again"
+    "errorReintentar": "Try again",
+    "errorSinSesion": "No active session",
+    "errorSaldo": "Could not load your balance",
+    "progresoAria": "Savings progress: {{pct}}%",
+    "ahorradosSufijo": "saved",
+    "statAhorroActual": "Current savings",
+    "statFaltaMeta": "Remaining to goal",
+    "statDepositosSpei": "SPEI deposits",
+    "depositosCompletados": "{{count}} completed",
+    "statRendimientoApy": "APY yield",
+    "rendimientoNeto": "{{apy}}% net",
+    "emergenciaDescMxn": "You can access up to {{pct}}% of your savings ({{monto}}) as an auto-loan without breaking your savings.",
+    "ahorroListoRetiro": "Your savings are ready to withdraw",
+    "cardAhorroTotal": "Total savings",
+    "cardTasaCetesBruta": "Gross CETES rate",
+    "cardRendimientoNeto": "Net yield",
+    "cardComisionPlataforma": "Platform fee",
+    "retiroProximamenteTitulo": "Withdrawals available soon",
+    "retiroProximamenteDesc": "We're enabling withdrawals via SPEI. We'll notify you when it's ready."
   },
   "rateBadge": {
     "cargando": "Fetching Etherfuse rate...",
@@ -223,7 +410,8 @@
     "sdkError": "run npm install @etherfuse/stablebond-sdk",
     "tasaBaja": "⚡ CETES rate below 4% — fee automatically reduced to 0.5%",
     "enVivo": "· live",
-    "ref": "· reference"
+    "ref": "· reference",
+    "apySuffix": "{{value}}% APY"
   },
   "connectCard": {
     "badgeConectada": "✓ Account active",
@@ -244,7 +432,13 @@
     "pendiente": "Pending",
     "balanceXLM": "Network",
     "balanceUSDC": "Balance",
-    "direccion": "Wallet"
+    "direccion": "Wallet",
+    "kyc": "KYC",
+    "kycVerificado": "✓ Verified",
+    "kycPendiente": "⏳ Pending",
+    "email": "Email",
+    "miCuenta": "My account",
+    "footerActiva": "Your savings are protected and earning real CETES yield."
   },
   "referrals": {
     "titulo": "Referral system",
@@ -266,7 +460,8 @@
     "errorDuplicado": "This email is already registered",
     "statsTotales": "Total referrals",
     "statsActivos": "Active (6+ months)",
-    "statsProgreso": "In progress"
+    "statsProgreso": "In progress",
+    "mesesCompacto": "{{meses}}/6 months"
   },
   "carlos": {
     "titulo": "Simulation:",
@@ -322,7 +517,9 @@
     "platAuto": "Autoloan admin",
     "platIncentivos": "Incentives paid",
     "platNeto": "Net income",
-    "reiniciar": "↺ Restart simulation"
+    "reiniciar": "↺ Restart simulation",
+    "on": "ON",
+    "off": "OFF"
   },
   "autoloan": {
     "titulo": "Emergency autoloan",
@@ -380,7 +577,20 @@
     "impagoVarios": "⚠ {{n}} months missed — your yield dropped to",
     "prestamoCompletado": "🎉 Loan completed",
     "rendimientoCompleto": "Your yield returned to {{rate}}% APY in full.",
-    "nuevaSolicitud": "New request"
+    "nuevaSolicitud": "New request",
+    "errorWalletNoConectada": "Wallet not connected",
+    "errorSolicitar": "Error requesting the loan",
+    "errorPagar": "Error paying the installment",
+    "montoMinimoMxn": "$170 MXN",
+    "ariaSolicitar": "Request a loan for {{monto}}",
+    "ariaSolicitarVacio": "Request loan",
+    "ariaCancelarSolicitud": "Cancel loan request",
+    "ariaConfirmarFirmar": "Confirm and sign loan",
+    "ariaIntentarDeNuevo": "Try again",
+    "ariaPagarMes": "Pay month {{mes}} of the loan",
+    "ariaFallarMes": "Fail payment month (demo)",
+    "ariaNuevaSolicitud": "Create a new loan request",
+    "maxSufijo": "{{val}} max."
   },
   "history": {
     "titulo": "Contribution history",
@@ -410,7 +620,17 @@
     "tipoRendimiento": "↑ Yield",
     "verTx": "✓ View tx →",
     "confirmado": "✓ Confirmed",
-    "pendiente": "⏳ Pending"
+    "pendiente": "⏳ Pending",
+    "badgeEtherfuse": "Etherfuse",
+    "saldoBloqueado": "Locked savings",
+    "saldoBloqueadoSub": "Total completed orders",
+    "viaSpeiEtherfuse": "Via SPEI · Etherfuse",
+    "movimientosDesc": "SPEI deposits recorded on Etherfuse",
+    "cargando": "Loading history...",
+    "colClabe": "CLABE",
+    "estadoCompletado": "✓ Completed",
+    "estadoProcesando": "⏳ Processing",
+    "estadoPendienteReloj": "🕐 Pending"
   },
   "snapshot": {
     "badge": "Mañana Seguro",
@@ -474,7 +694,20 @@
     "ingresosProyeccion": "Platform revenue projection",
     "ingresosColUsuarios": "Users",
     "ingresosColActivos": "AUM",
-    "ingresosColIngreso": "Revenue/year"
+    "ingresosColIngreso": "Revenue/year",
+    "confirmarEliminarMeta": "Delete the goal \"{{nombre}}\"? This action cannot be undone.",
+    "calculando": "Calculating...",
+    "fechaRetiroFormato": "{{anio}} (~{{anos}} years)",
+    "metasActivasTitulo": "Your Active Goals",
+    "statSaldoDisponible": "Available balance",
+    "statProximamente": "Coming soon",
+    "hoyPrefijo": "↑ today: +{{val}}",
+    "statProyeccionSubNeto": "{{apy}}% net APY",
+    "sinMeta": "No goal",
+    "tablistAriaLabel": "Dashboard sections",
+    "valRedBanxico": "Etherfuse · Banxico",
+    "valProveedorCetes": "Etherfuse CETES",
+    "valMinDeposito": "$40 MXN"
   },
   "contributionPlanner": {
     "titulo": "Configure your savings",
@@ -516,7 +749,14 @@
     "bloqueado": "✓ Savings locked",
     "bloquearBtn": "🔒 Lock savings",
     "txConfirmada": "✅ Transaction confirmed on testnet",
-    "verStellar": "View on Stellar Expert → "
+    "verStellar": "View on Stellar Expert → ",
+    "ahorroMensualMxnLabel": "Monthly savings (MXN)",
+    "incentivoOpcionSufijo": "{{pct}}% for you",
+    "comoFunciona": "How does it work?",
+    "comoFuncionaDesc": "This simulation shows how much your savings will grow. To deposit, use the",
+    "comoFuncionaBtn": "+ Deposit",
+    "comoFuncionaDesc2": "button above — you just need to make a SPEI transfer from your bank to the CLABE we give you.",
+    "anualSufijo": "{{pct}} annual"
   },
   "incentiveScenarios": {
     "solo_fidelidad": {
@@ -591,13 +831,277 @@
     "rendimientoSub": "over what you deposit",
     "btnCrear": "Create my first goal and start saving →",
     "btnCreando": "Creating goal...",
-    "minimoError": "Minimum savings is ${{min}} MXN"
+    "minimoError": "Minimum savings is ${{min}} MXN",
+    "tituloAccent": "Set up your first goal",
+    "tituloSufijo": "to secure your future",
+    "amigoFallback": "friend",
+    "errorCrear": "Error creating the goal",
+    "minimoInline": "Minimum ${{min}} MXN",
+    "nombreDefault": "Main Retirement"
+  },
+  "verificacion": {
+    "tituloIzq": "Verification",
+    "descIzq": "Confirm your identity with the one-time code we sent to your device.",
+    "titulo": "Verification code",
+    "subtitulo": "One-time code · valid for 3 minutes",
+    "instruccion": "We sent a 5-digit code to your {{medio}}, enter it below to access.",
+    "medio": "phone number",
+    "acceder": "Access",
+    "verificando": "Verifying...",
+    "reenviarEn": "Request another code in {{tiempo}} seconds",
+    "solicitarOtro": "Request another code",
+    "errorTitulo": "Error: incorrect data",
+    "errorCodigo": "The code entered is not valid. Check and try again.",
+    "regresar": "Go back"
   },
   "errorBoundary": {
-    "titulo": "Something went wrong",
     "descripcion": "An unexpected error occurred while processing your request. Your money and information are safe. Try again or go back home.",
     "reintentar": "Try again",
     "volverInicio": "Back to home",
     "detallesDev": "Technical details (development only)"
+  },
+  "goalCard": {
+    "principal": "Main",
+    "editarMeta": "Edit goal",
+    "eliminarMeta": "Delete goal",
+    "saldo": "Balance:",
+    "recienCreada": "(Just created)",
+    "progresoAria": "Progress toward goal: {{pct}}%",
+    "ahorro": "Savings:",
+    "porMes": "/mo",
+    "meta": "Goal:",
+    "cerrar": "Close",
+    "nombreLabel": "Name",
+    "ahorroMensualLabel": "Monthly savings (MXN)",
+    "montoObjetivoLabel": "Target amount (MXN)",
+    "aniosRetiroLabel": "Years to retirement",
+    "cancelar": "Cancel",
+    "guardando": "Saving...",
+    "guardarCambios": "Save changes",
+    "errorActualizar": "Error updating",
+    "nuevaMeta": "New goal",
+    "nombreMetaLabel": "Goal name",
+    "nombrePlaceholder": "E.g. House, Education, Emergency...",
+    "errorNombreRequerido": "Name is required",
+    "errorCrear": "Error creating",
+    "creando": "Creating...",
+    "crearMeta": "Create goal"
+  },
+  "perfilInfo": {
+    "regresar": "Back",
+    "tituloParte1": "Your",
+    "tituloParte2": "profile",
+    "tituloParte3": "information",
+    "subtitulo": "Your data, safe",
+    "descripcion": "All the information you share is protected under the highest security standards.",
+    "foto": "Profile photo",
+    "seleccionarArchivo": "Choose file",
+    "fotoAlt": "Preview of your photo",
+    "nombreCompleto": "Full name",
+    "nombre": "First name(s)*",
+    "apellidoPaterno": "Paternal last name*",
+    "apellidoMaterno": "Maternal last name*",
+    "crearAcceso": "Create access",
+    "telefono": "Phone number*",
+    "correo": "Email address*",
+    "contrasena": "Password*",
+    "confirmarContrasena": "Confirm your password*",
+    "errorContrasena": "Passwords do not match.",
+    "datosBancarios": "Bank details",
+    "titular": "Account holder name*",
+    "banco": "Select your bank*",
+    "cuenta": "Card number or CLABE*",
+    "beneficiario": "Primary beneficiary",
+    "beneficiarioNombre": "Beneficiary's full name*",
+    "parentesco": "Relationship*",
+    "beneficiarioTelefono": "Beneficiary's phone number*",
+    "cambiar": "Update"
+  },
+  "mainScreen": {
+    "weAre": "We are",
+    "heroLine1Pre": "Your",
+    "heroLine1Accent": "retirement",
+    "heroLine1Post": "is already",
+    "heroLine2Pre": "in your",
+    "heroLine2Accent": "hands.",
+    "mainAccount": "Main account",
+    "cetesAsset": "CETES asset",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "goalPrefix": "Goal in",
+    "goalYears": "{{years}} years",
+    "estimatedTotal": "Estimated total:",
+    "learnMore": "Learn more",
+    "months": "months",
+    "history": "Transfer history",
+    "historyDeposit": "Deposit",
+    "historyEmergency": "Emergency withdrawal",
+    "hoursSuffix": "hrs.",
+    "knowMore": "Learn more",
+    "promoGetUpTo": "Get up to",
+    "promoOf": "of",
+    "promoYield": "total yield",
+    "promoRest": "generated by your consistent savings.",
+    "emergencyQuestion": "Have an emergency?",
+    "weUnderstand": "We understand",
+    "emergencyText": "Learn how to borrow up to 30% of your savings."
+  },
+  "dataAccount": {
+    "titleLead": "Bank details",
+    "titleAccent1": "and",
+    "titleAccent2": "beneficiaries",
+    "description": "To manage your transactions, enter a personal debit account and choose your beneficiary in case of death.",
+    "back": "Back",
+    "mobileTitleLead": "Bank",
+    "mobileTitleAccent": "details",
+    "mobileSubtitle": "Enter your account and choose your beneficiary.",
+    "cardTitle1": "Enter your account and",
+    "cardTitle2": "choose your beneficiary",
+    "bankDetails": "Bank details",
+    "fullName": "Full name",
+    "chooseBank": "Choose your bank",
+    "cardOrClabe": "Card or CLABE account",
+    "other": "Other",
+    "beneficiary": "Primary beneficiary",
+    "beneficiaryName": "Full name*",
+    "relationship": "Relationship to this person*",
+    "phone": "Phone number*",
+    "hasAccountQuestion": "Does your beneficiary have a Mañana Seguro account?",
+    "quickConnect": "Make a quick connection.",
+    "continue": "Continue",
+    "legal": "All information is encrypted and handled in accordance with Mexican law. You can change your beneficiary later.",
+    "relations": {
+      "spouse": "Spouse",
+      "child": "Son/Daughter",
+      "father": "Father",
+      "mother": "Mother",
+      "sibling": "Brother/Sister",
+      "other": "Other"
+    }
+  },
+  "deposits": {
+    "heroAccent": "Deposit",
+    "heroMid": "in",
+    "heroEnd": "seconds",
+    "cardTitle": "Grow your retirement in 2 simple steps",
+    "step1": "1- Deposit the amount you want into the following account",
+    "bank": "Bank",
+    "copy": "Copy to clipboard",
+    "copied": "Copied!",
+    "step2": "2- Your deposit will show up in a few minutes",
+    "supportPre": "(if it takes more than a day to show up, contact",
+    "supportLink": "Mañana Seguro Support",
+    "supportPost": ")",
+    "recentTitle": "Recent transactions",
+    "colDate": "Deposit date",
+    "colAmount": "Deposit amount",
+    "colStatus": "Status",
+    "colBank": "Bank",
+    "hoursSuffix": "hrs.",
+    "empty": "No transactions yet",
+    "status": {
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed"
+    }
+  },
+  "signIn": {
+    "tagline1Pre": "Your",
+    "tagline1Accent": "money,",
+    "tagline2Pre": "Your",
+    "tagline2Accent": "rules,",
+    "tagline3Pre": "Your",
+    "tagline3Accent": "retirement",
+    "title": "Sign in",
+    "subtitle1": "Access your account,",
+    "subtitle2": "enter your email and password",
+    "accountCreated": "Account created successfully",
+    "email": "Email address",
+    "password": "Password",
+    "forgot": "Forgot your password?",
+    "recover": "Recover it",
+    "loading": "Signing in...",
+    "continue": "Continue",
+    "or": "or",
+    "google": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up",
+    "terms1": "By clicking “Continue” you accept",
+    "terms2Pre": "the",
+    "termsLink": "terms and conditions of use",
+    "errors": {
+      "emptyFields": "Enter your email and password.",
+      "invalidCredentials": "Incorrect email or password."
+    }
+  },
+  "incentivos": {
+    "tituloParte1": "Incentive",
+    "tituloParte2": "program",
+    "subtitulo": "Get a share of all your effort.",
+    "descripcion": "Mañana Seguro rewards you with 5% of your effort. Saving doesn't have to be boring, so every 5 years we give you the boost you need.",
+    "seleccionada": "Selected option",
+    "nota": "Once selected, you will have only 1 month to change your choice. After that, no changes can be made.",
+    "fidelidad": {
+      "titulo": "Loyalty incentive.",
+      "descripcion": "Option 1: Your challenge is with your future. In all 12 months of the year, contribute at least 5 dollars to your account. With your consistency, your incentive will go from 5% to 7%.",
+      "boton": "Select option 1"
+    },
+    "confianza": {
+      "titulo": "Trust incentive.",
+      "descripcion": "Option 2: Your loved ones also need a Mañana Seguro. With a few clicks, get two people to start saving and move from 5% to 7% in incentives.",
+      "boton": "Select option 2"
+    }
+  },
+  "metaEstablecida": {
+    "tituloParte1": "Goal",
+    "tituloParte2": "set",
+    "cambiarMeta": "Change goal",
+    "aviso": "Remember that you can only change your goal once a year*",
+    "acepto": "I accept the",
+    "terminos": "terms and conditions of use",
+    "tuMeta": "Your goal is:",
+    "totalFinal": "Estimated total at the end of the goal",
+    "graficaLabel": "Projected growth of your savings",
+    "totalEstimado": "Estimated total:",
+    "botonCambiar": "Change goal",
+    "anios_one": "{{count}} year",
+    "anios_other": "{{count}} years"
+  },
+  "authScreen": {
+    "tagline1Pre": "Your",
+    "tagline1Accent": "money,",
+    "tagline2Pre": "Your",
+    "tagline2Accent": "rules,",
+    "tagline3Pre": "Your",
+    "tagline3Accent": "retirement",
+    "title": "Sign up",
+    "subtitle1": "Having your future in your hands",
+    "subtitle2": "has never been so easy",
+    "createWithEmail": "Create account with email",
+    "terms1": "By clicking “Continue” you accept",
+    "terms2Pre": "the",
+    "termsLink": "terms and conditions of use"
+  },
+  "dataProfile": {
+    "titleLead": "Personal",
+    "titleAccent": "details",
+    "intro": "To create your account we need some personal details.",
+    "secureTitle": "Your data, safe",
+    "secureText": "All the information you share is protected under the highest security standards.",
+    "fastTitle": "Quick process",
+    "fastText": "Complete your registration in under 3 minutes and access all the benefits of your account.",
+    "formTitle": "Sign up in minutes",
+    "fullName": "Full name",
+    "firstName": "First name(s)*",
+    "paternalName": "Paternal last name*",
+    "maternalName": "Maternal last name*",
+    "createAccess": "Create access",
+    "email": "Email address*",
+    "password": "Password*",
+    "confirmPassword": "Confirm your password*",
+    "processing": "Processing...",
+    "continue": "Continue",
+    "privacyPre": "You can review how we handle and protect your data in accordance with the law",
+    "privacyLink": "here"
   }
 }

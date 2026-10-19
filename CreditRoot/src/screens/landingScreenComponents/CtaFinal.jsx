@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import ardilla from '../../assets/Ardilla_vector.png'
-import logo from '../../assets/LOGO_MS.png'
+import logo from '../../assets/LOGO_MS_orange.png'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 function CtaFinal({ onRegister, onLogin }) {
@@ -10,7 +10,7 @@ function CtaFinal({ onRegister, onLogin }) {
     const { t } = useTranslation()
 
     return (
-        <section className="container mx-auto px-40 py-16" ref={ref}>
+        <section className="container mx-auto px-4 lg:px-40 py-16" ref={ref}>
             <div className={`relative bg-brand rounded-3xl px-5 py-10 text-center overflow-hidden transition-all duration-700 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
 
                 <img src={ardilla} alt="" aria-hidden="true"

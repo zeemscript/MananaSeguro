@@ -1,9 +1,13 @@
 [build]
-  command = "cd CreditRoot && npm install && npm run build"
+  command = "cd CreditRoot && npm install --legacy-peer-deps && npm run build"
   publish = "CreditRoot/dist"
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Ignorar archivos de prueba globalmente usando sintaxis de arreglo
+functions.ignore = ["**/*.test.js", "**/*.spec.js"]
 
 [dev]
   command = "npm run dev --prefix CreditRoot"
@@ -21,12 +25,6 @@
 [[redirects]]
   from = "/api/exchange-rate"
   to = "/.netlify/functions/exchange-rate"
-  status = 200
-
-#  API: Etherfuse Ramp (proxy general) 
-[[redirects]]
-  from = "/api/etherfuse-ramp"
-  to = "/.netlify/functions/etherfuse-ramp"
   status = 200
 
 #  API: autenticación 
@@ -65,7 +63,13 @@
   to = "/.netlify/functions/metas"
   status = 200
 
-#  SPA fallback — debe ir al final siempre 
+#  API: firma custodial de intenciones
+[[redirects]]
+  from = "/api/sign-intent"
+  to = "/.netlify/functions/sign-intent"
+  status = 200
+
+#  SPA fallback — debe ir al final siempre
 [[redirects]]
   from = "/*"
   to = "/index.html"

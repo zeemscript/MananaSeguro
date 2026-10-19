@@ -7,18 +7,25 @@
     "iniciarSesion": "Iniciar sesión",
     "comenzarGratis": "Comenzar gratis",
     "volverInicio": "← Volver al inicio",
-    "cerrarSesion": "Cerrar sesión"
+    "cerrarSesion": "Cerrar sesión",
+    "logoAlt": "Logo Mañana Seguro",
+    "marca": "Mañana",
+    "marcaAccent": "Seguro",
+    "cambiarIdioma": "Cambiar idioma",
+    "activarModoClaro": "Activar modo claro",
+    "activarModoOscuro": "Activar modo oscuro",
+    "toggleMenu": "Abrir menú"
   },
   "landing": {
     "badge": "Ahorro para retiro · CETES · México",
     "titulo": "Tu retiro,",
     "tituloAccent": "en tus manos.",
-    "descripcion": "Ahorra desde $40 pesos al mes con rendimiento real de CETES. Transfiere desde tu banco — igual que pagas cualquier servicio.",
+    "descripcion": "Ahorra desde $40 pesos al mes con rendimiento real de CETES. Transfiere desde tu banco, igual que pagas cualquier servicio.",
     "puntos": {
       "apy": "~{{apy}}% APY neto (tasa CETES real vía Etherfuse)",
       "fondos": "Tu dinero genera rendimiento real — nadie puede tocarlo",
       "prestamo": "Autopréstamo de emergencia hasta 30% sin romper tu ahorro",
-      "spei": "Deposita desde tu banco con SPEI — sin crypto, sin instalaciones"
+      "spei": "Deposita desde tu banco con SPEI, sin crypto, sin instalaciones"
     },
     "comenzar": "Comenzar ahora →",
     "yaTengo": "Ya tengo cuenta",
@@ -47,7 +54,7 @@
       "titulo": "Tu retiro empieza",
       "tituloAccent": "hoy mismo.",
       "descripcion": "Sin banco, sin intermediarios. El contrato Soroban garantiza que tus fondos están seguros y generando rendimiento real.",
-      "crear": "Crear cuenta gratis →",
+      "crear": "Crear cuenta gratis",
       "yaTengo": "Ya tengo cuenta",
       "trust": "Sin tarjeta de crédito · 100% on-chain"
     },
@@ -65,16 +72,19 @@
   "calc": {
     "proyeccion": "Proyección a {{anios}} años",
     "apy": "MXN · a {{apy}}% APY neto",
-    "tasaVivo": "Tasa CETES en vivo · {{rate}}% bruto",
-    "tasaRef": "Tasa referencial · {{rate}}%",
+    "tasaVivo": "Tasa de referencia {{rate}}%",
+    "tasaRef": "Tasa de referencia {{rate}}%",
     "cargando": "Cargando tasa...",
     "aporteLabel": "Ahorro mensual",
     "tiempoLabel": "Tiempo de ahorro",
-    "empezar": "Empezar a ahorrar →",
+    "empezar": "Crear una cuenta",
     "aniosSufijo": "años",
     "min": "1 año",
     "max": "40 años",
-    "apyMxn": "Pesos mexicanos · a {{apy}}% APY neto"
+    "apyMxn": "Pesos mexicanos · a {{apy}}% APY neto",
+    "mascotaAlt": "Mascota Mañana Seguro",
+    "yaTienesCuenta": "¿Ya tienes cuenta?",
+    "iniciarSesion": "Iniciar sesión"
   },
   "auth": {
     "badge": "Tu retiro, en tus manos",
@@ -84,18 +94,9 @@
     "tituloNombreAccent": "llamamos?",
     "descWallet": "Sin contraseñas ni instalaciones. Solo tu correo de Google y listo.",
     "descNombre": "Solo necesitas tu correo. Sin bancos, sin papeleo.",
-    "conectar": "Conectar Freighter",
     "conectando": "Conectando...",
-    "noFreighter": "¿No tienes Freighter?",
-    "instalar": "Instalar Freighter",
-    "walletConectada": "Wallet conectada",
-    "nombreLabel": "Tu nombre",
-    "nombrePlaceholder": "Ej: María González",
-    "entrar": "Entrar",
-    "cambiarWallet": "Usar otra wallet",
     "continuarGoogle": "Continuar con Google",
     "continuarEmail": "Continuar con email",
-    "usarFreighter": "Usar Freighter (avanzado)",
     "paso1": "Entra con Google",
     "paso2": "Verifica tu identidad (KYC)",
     "paso3": "Registra tu CLABE bancaria",
@@ -103,12 +104,177 @@
     "trust1": "Sin contraseña",
     "trust2": "30 segundos",
     "trust3": "Depósito SPEI",
-    "opcionesAvanzadas": "opciones avanzadas"
+    "errorSinCredencial": "No se recibió credencial de Google. Intenta de nuevo.",
+    "errorLogin": "Error al iniciar sesión",
+    "errorLoginReintentar": "Error al iniciar sesión. Intenta de nuevo.",
+    "errorConfig": "Error de configuración — contacta al equipo de Mañana Seguro",
+    "errorGoogleCarga": "No se pudo cargar Google. Verifica tu conexión.",
+    "errorCampoRequerido": "{{campo}} requerido",
+    "heroTitulo": "Empieza a ahorrar",
+    "heroTituloAccent": "en 30 segundos.",
+    "mascotaAlt": "Mascota Mañana Seguro",
+    "registro": {
+      "tituloDatos": "Datos",
+      "tituloPersonales": "personales",
+      "descripcion": "Para poder crear tu cuenta necesitamos algunos datos personales.",
+      "datosSeguros": "Tus datos, seguros",
+      "descripcionSeguridad": "Toda la información que compartes está protegida bajo los más altos estándares de seguridad.",
+      "procesoRapido": "Proceso rápido",
+      "descripcionRapido": "Completa tu registro en menos de 3 minutos y accede a todos los beneficios de tu cuenta.",
+      "tituloFormulario": "Regístrate en minutos",
+      "alertTitle": "Error",
+      "nombre": "Nombre(s)*",
+      "apellidoPaterno": "Apellido paterno*",
+      "apellidoMaterno": "Apellido materno*",
+      "seleccionarPais": "Seleccionar país",
+      "telefono": "Número de teléfono*",
+      "buscarPais": "Busca país o código",
+      "email": "Correo electrónico*",
+      "password": "Contraseña*",
+      "confirmarPassword": "Confirma tu contraseña*",
+      "acepto": "Acepto los",
+      "autorizacion": "y autorizo el tratamiento de mis datos para la creación de mi cuenta.",
+      "creandoCuenta": "Creando cuenta...",
+      "continuar": "Continuar",
+      "politicaIntro": "Puedes revisar cómo tratamos tus datos en nuestra",
+      "errorCampos": "Completa nombre, apellidos, correo, contraseña y teléfono para continuar.",
+      "errorPassword": "Las contraseñas no coinciden.",
+      "errorTerminos": "Debes aceptar los términos y condiciones para crear tu cuenta.",
+      "errorCrear": "No fue posible crear la cuenta.",
+      "errorReintentar": "Error al crear la cuenta. Inténtalo otra vez."
+    }
+  },
+  "quickConnect": {
+    "titulo": "Conexión",
+    "tituloAccent": "rápida",
+    "descripcion": "Conecta una cuenta para ser beneficiaria en caso de descenso con tu MsID.",
+    "msId": "MsID",
+    "msIdPlaceholder": "Ingresa el MsID",
+    "ejemplo": "Ejemplo",
+    "aceptarBeneficio": "Acepto otorgar mi beneficio como beneficiario generado a la persona del MsID.",
+    "otorgarBeneficio": "Otorgar beneficio",
+    "requestReady": "La solicitud está lista para conectarse al backend.",
+    "aviso": "Puedes cambiar tu beneficiario más adelante en la configuración, recuerda que los cambios están sujetos a revisión de seguridad."
+  },
+  "changePassword": {
+    "back": "Regresar",
+    "forgot": "¿Necesitas cambiar tu contraseña?",
+    "title": "Cambia tu",
+    "titleAccent": "contraseña",
+    "description": "Valida que eres tú, ahora cambia tu contraseña por una contraseña segura.",
+    "cardTitle": "Cambio de contraseña",
+    "cardSubtitle": "Ingresa tu nueva clave para asegurar tu cuenta",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirmar nueva contraseña",
+    "showPassword": "Mostrar u ocultar contraseña",
+    "showConfirmPassword": "Mostrar u ocultar confirmación de contraseña",
+    "requirementsTitle": "Tu contraseña debe incluir",
+    "requirements": {
+      "length": "Al menos 12 caracteres",
+      "uppercase": "Una letra mayúscula",
+      "lowercase": "Una letra minúscula",
+      "number": "Un número",
+      "symbol": "Un símbolo (por ejemplo: !, #, $)"
+    },
+    "passwordsMatch": "Las contraseñas coinciden",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "requestReady": "La solicitud está lista para conectarse al servicio de cambio de contraseña.",
+    "submit": "Cambiar contraseña"
+  },
+  "emergencyWithdrawal": {
+    "brand": "Somos",
+    "brandAccent": "MañanaSeguro.",
+    "title": "Retiro de",
+    "titleAccent": "emergencia",
+    "accountLabel": "Cuenta principal",
+    "availableLabel": "Disponible",
+    "rateLabel": "Activo CETES",
+    "stepOne": "Paso 1: Seleccione cantidad a retirar:",
+    "stepTwo": "Paso 2: Seleccione los meses a pagar su aporte:",
+    "optionLabel": "meses",
+    "disposable": "Disponible del 30%",
+    "terms": "Acepto los términos y condiciones de uso",
+    "submit": "Acceder a retiro de emergencia",
+    "statusLabel": "Solicitud lista",
+    "statusMessage": "La solicitud está preparada para enviarse al backend cuando se conecte la integración.",
+    "availableExplanation": "Cantidad disponible para retiro de emergencia. Este valor se usa como base del cálculo del 30%.",
+    "termDetails": "Cada mes retrasado reduce el rendimiento en 1% durante un año."
+  },
+  "settings": {
+    "back": "Regresar",
+    "openProfile": "Abrir perfil y configuración",
+    "goHome": "Ir al inicio de Mañana Seguro",
+    "avatarAlt": "Avatar de perfil de Mañana Seguro",
+    "namePlaceholder": "[Nombre]",
+    "lastNamePlaceholder": "[Apellido]",
+    "title": "Tu",
+    "titleAccent": "Perfil",
+    "signOutLabel": "Cerrar sesión",
+    "signOut": "Cerrar mi sesión actual",
+    "menuTitle": "Configuración",
+    "actionReady": "{{action}} seleccionado. La acción está lista para conectarse al backend.",
+    "actions": {
+      "profile": "Información de tu perfil",
+      "privacy": "Privacidad y seguridad",
+      "help": "Centro de ayuda",
+      "history": "Historial de movimientos",
+      "msid": "Código MsID",
+      "wallet": "Wallet y Auth",
+      "about": "Acerca de"
+    }
+  },
+  "about": {
+    "back": "Regresar",
+    "goHome": "Ir al inicio de Mañana Seguro",
+    "promise1": "Tu dinero,",
+    "promiseAccent1": "tus reglas.",
+    "promise2": "Tu",
+    "promiseAccent2": "futuro,",
+    "promise3": "tu",
+    "promiseAccent3": "retiro.",
+    "title": "Acerca de",
+    "company": "Mañana Seguro S.A. de C.V.",
+    "developedBy": "Desarrollado por",
+    "teamTitle": "Equipo de desarrollo",
+    "team": {
+      "member1": {
+        "name": "Daniel Rosales",
+        "role": "Cofundador, desarrollador de producto y diseñador UI móvil"
+      },
+      "member2": {
+        "name": "Renata Ortiz",
+        "role": "Cofundadora, desarrolladora de producto y diseñadora UI móvil"
+      },
+      "member3": {
+        "name": "Ulises Campuzano",
+        "role": "Cofundador y desarrollador web"
+      },
+      "member4": {
+        "name": "Bernardo González",
+        "role": "Cofundador y desarrollador móvil"
+      },
+      "member5": {
+        "name": "Davor Barrera",
+        "role": "Cofundador y desarrollador web"
+      }
+    },
+    "partners": "Nuestros aliados",
+    "socialTitle": "Redes sociales"
   },
   "footer": {
     "stellar": "Construido sobre Stellar",
     "etherfuse": "Powered by Etherfuse",
-    "hackathon": "Genesis Hackathon 2026"
+    "hackathon": "Genesis Hackathon 2026",
+    "derechos": "© {{year}} Mañana Seguro. Todos los derechos reservados.",
+    "privacidad": "Aviso de privacidad",
+    "terminos": "Términos y condiciones",
+    "social": {
+      "x": "X / Twitter",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "correo": "Correo"
+    }
   },
   "home": {
     "badge": "🔒 Ahorro para retiro · Etherfuse CETES · Stellar",
@@ -122,7 +288,10 @@
       "rendimiento": "Rendimiento anual CETES",
       "empezar": "Para empezar",
       "comision": "Comisión plataforma"
-    }
+    },
+    "descripcionIntro": "Conecta tu cuenta de banco, empieza a ahorrar con SPEI desde $100 pesos.",
+    "cetesEnVivo": "CETES en vivo · {{rate}}% bruto vía Banxico",
+    "tipoCambio": "Tipo de cambio · ${{rate}} MXN/USD vía Banxico"
   },
   "dashboard": {
     "badge": "Dashboard · Mañana Seguro",
@@ -143,29 +312,29 @@
     "flujoCompleto": "El flujo completo",
     "pasos": [
       {
-        "icon": "💵",
+        "icon": "🏦",
         "step": "Depositas desde tu banco",
         "desc": "Desde $40 MXN vía SPEI, cuando quieras"
       },
       {
-        "icon": "🔒",
-        "step": "Contrato bloquea",
-        "desc": "Soroban en Stellar testnet"
+        "icon": "🔐",
+        "step": "Etherfuse guarda tu ahorro",
+        "desc": "Respaldado por CETES del gobierno mexicano"
       },
       {
         "icon": "📈",
         "step": "Etherfuse rinde",
-        "desc": "{{apy}}% APY en pesos vía CETES"
+        "desc": "{{apy}}% APY neto en pesos vía CETES"
       },
       {
         "icon": "🎁",
         "step": "Incentivos c/5 años",
-        "desc": "Hasta 7% extra por fidelidad"
+        "desc": "Hasta 9% extra por fidelidad"
       },
       {
-        "icon": "🏆",
+        "icon": "👤",
         "step": "Retiras al llegar",
-        "desc": "Todo a tu wallet, sin banco"
+        "desc": "Todo a tu cuenta bancaria, sin banco intermediario"
       }
     ],
     "verificandoTitulo": "Verificando tu meta de retiro",
@@ -210,7 +379,25 @@
     "exitosoTxTitulo": "✅ Transacción confirmada en Stellar",
     "exitosoTxLink": "Ver en Stellar Expert → ",
     "errorTitulo": "Algo salió mal",
-    "errorReintentar": "Reintentar"
+    "errorReintentar": "Reintentar",
+    "errorSinSesion": "Sin sesión activa",
+    "errorSaldo": "No se pudo cargar tu saldo",
+    "progresoAria": "Progreso de ahorro: {{pct}}%",
+    "ahorradosSufijo": "ahorrados",
+    "statAhorroActual": "Ahorro actual",
+    "statFaltaMeta": "Falta para meta",
+    "statDepositosSpei": "Depósitos vía SPEI",
+    "depositosCompletados": "{{count}} completados",
+    "statRendimientoApy": "Rendimiento APY",
+    "rendimientoNeto": "{{apy}}% neto",
+    "emergenciaDescMxn": "Puedes acceder hasta el {{pct}}% de tu ahorro ({{monto}}) como autopréstamo sin romper tu ahorro.",
+    "ahorroListoRetiro": "Tu ahorro está listo para retirarse",
+    "cardAhorroTotal": "Ahorro total",
+    "cardTasaCetesBruta": "Tasa CETES bruta",
+    "cardRendimientoNeto": "Rendimiento neto",
+    "cardComisionPlataforma": "Comisión plataforma",
+    "retiroProximamenteTitulo": "Retiro disponible próximamente",
+    "retiroProximamenteDesc": "Estamos habilitando la función de retiro vía SPEI. Te notificaremos cuando esté lista."
   },
   "rateBadge": {
     "cargando": "Consultando tasa Etherfuse...",
@@ -223,7 +410,8 @@
     "sdkError": "ejecuta npm install @etherfuse/stablebond-sdk",
     "tasaBaja": "⚡ Tasa CETES bajo 4% — comisión reducida automáticamente a 0.5%",
     "enVivo": "· en vivo",
-    "ref": "· referencial"
+    "ref": "· referencial",
+    "apySuffix": "{{value}}% APY"
   },
   "connectCard": {
     "badgeConectada": "✓ Cuenta activa",
@@ -244,7 +432,13 @@
     "pendiente": "Pendiente",
     "balanceXLM": "Red",
     "balanceUSDC": "Saldo",
-    "direccion": "Wallet"
+    "direccion": "Wallet",
+    "kyc": "KYC",
+    "kycVerificado": "✓ Verificado",
+    "kycPendiente": "⏳ Pendiente",
+    "email": "Email",
+    "miCuenta": "Mi cuenta",
+    "footerActiva": "Tu ahorro está protegido y generando rendimiento real de CETES."
   },
   "referrals": {
     "titulo": "Sistema de referidos",
@@ -266,7 +460,8 @@
     "errorDuplicado": "Este correo ya está registrado",
     "statsTotales": "Referidos totales",
     "statsActivos": "Activos (6+ meses)",
-    "statsProgreso": "En progreso"
+    "statsProgreso": "En progreso",
+    "mesesCompacto": "{{meses}}/6 meses"
   },
   "carlos": {
     "titulo": "Simulación:",
@@ -322,7 +517,9 @@
     "platAuto": "Adm. autopréstamo",
     "platIncentivos": "Incentivos pagados",
     "platNeto": "Ingreso neto",
-    "reiniciar": "↺ Reiniciar simulación"
+    "reiniciar": "↺ Reiniciar simulación",
+    "on": "ON",
+    "off": "OFF"
   },
   "autoloan": {
     "titulo": "Autopréstamo de emergencia",
@@ -380,7 +577,20 @@
     "impagoVarios": "⚠ {{n}} meses sin pagar — tu rendimiento bajó a",
     "prestamoCompletado": "🎉 Préstamo completado",
     "rendimientoCompleto": "Tu rendimiento volvió a {{rate}}% APY completo.",
-    "nuevaSolicitud": "Nueva solicitud"
+    "nuevaSolicitud": "Nueva solicitud",
+    "errorWalletNoConectada": "Wallet no conectada",
+    "errorSolicitar": "Error al solicitar el préstamo",
+    "errorPagar": "Error al pagar la cuota",
+    "montoMinimoMxn": "$170 MXN",
+    "ariaSolicitar": "Solicitar préstamo de {{monto}}",
+    "ariaSolicitarVacio": "Solicitar préstamo",
+    "ariaCancelarSolicitud": "Cancelar solicitud de préstamo",
+    "ariaConfirmarFirmar": "Confirmar y firmar préstamo",
+    "ariaIntentarDeNuevo": "Intentar de nuevo",
+    "ariaPagarMes": "Pagar mes {{mes}} del préstamo",
+    "ariaFallarMes": "Fallar mes de pago (demo)",
+    "ariaNuevaSolicitud": "Crear nueva solicitud de préstamo",
+    "maxSufijo": "{{val}} máx."
   },
   "history": {
     "titulo": "Historial de aportaciones",
@@ -410,7 +620,17 @@
     "tipoRendimiento": "↑ Rendimiento",
     "verTx": "✓ Ver tx →",
     "confirmado": "✓ Confirmado",
-    "pendiente": "⏳ Pendiente"
+    "pendiente": "⏳ Pendiente",
+    "badgeEtherfuse": "Etherfuse",
+    "saldoBloqueado": "Ahorro bloqueado",
+    "saldoBloqueadoSub": "Total de órdenes completadas",
+    "viaSpeiEtherfuse": "Vía SPEI · Etherfuse",
+    "movimientosDesc": "Depósitos vía SPEI registrados en Etherfuse",
+    "cargando": "Cargando historial...",
+    "colClabe": "CLABE",
+    "estadoCompletado": "✓ Completado",
+    "estadoProcesando": "⏳ Procesando",
+    "estadoPendienteReloj": "🕐 Pendiente"
   },
   "snapshot": {
     "badge": "Mañana Seguro",
@@ -474,7 +694,20 @@
     "ingresosProyeccion": "Proyección de ingresos plataforma",
     "ingresosColUsuarios": "Usuarios",
     "ingresosColActivos": "AUM",
-    "ingresosColIngreso": "Ingreso/año"
+    "ingresosColIngreso": "Ingreso/año",
+    "confirmarEliminarMeta": "¿Eliminar la meta \"{{nombre}}\"? Esta acción no se puede deshacer.",
+    "calculando": "Calculando...",
+    "fechaRetiroFormato": "{{anio}} (~{{anos}} años)",
+    "metasActivasTitulo": "Tus Metas Activas",
+    "statSaldoDisponible": "Saldo disponible",
+    "statProximamente": "Próximamente",
+    "hoyPrefijo": "↑ hoy: +{{val}}",
+    "statProyeccionSubNeto": "{{apy}}% APY neto",
+    "sinMeta": "Sin meta",
+    "tablistAriaLabel": "Secciones del dashboard",
+    "valRedBanxico": "Etherfuse · Banxico",
+    "valProveedorCetes": "Etherfuse CETES",
+    "valMinDeposito": "$40 MXN"
   },
   "contributionPlanner": {
     "titulo": "Configura tu ahorro",
@@ -516,7 +749,14 @@
     "bloqueado": "✓ Ahorro bloqueado",
     "bloquearBtn": "🔒 Bloquear ahorro",
     "txConfirmada": "✅ Transacción confirmada en testnet",
-    "verStellar": "Ver en Stellar Expert → "
+    "verStellar": "Ver en Stellar Expert → ",
+    "ahorroMensualMxnLabel": "Ahorro mensual (MXN)",
+    "incentivoOpcionSufijo": "{{pct}}% para ti",
+    "comoFunciona": "¿Cómo funciona?",
+    "comoFuncionaDesc": "Esta simulación te muestra cuánto crecerá tu ahorro. Para depositar, usa el botón",
+    "comoFuncionaBtn": "+ Depositar",
+    "comoFuncionaDesc2": "arriba — solo necesitas hacer un SPEI desde tu banco a la CLABE que te damos.",
+    "anualSufijo": "{{pct}} anual"
   },
   "incentiveScenarios": {
     "solo_fidelidad": {
@@ -591,7 +831,28 @@
     "rendimientoSub": "sobre lo aportado",
     "btnCrear": "Crear mi primera meta y empezar a ahorrar →",
     "btnCreando": "Creando meta...",
-    "minimoError": "El ahorro mínimo es ${{min}} MXN"
+    "minimoError": "El ahorro mínimo es ${{min}} MXN",
+    "tituloAccent": "Configura tu primera meta",
+    "tituloSufijo": "para asegurar tu futuro",
+    "amigoFallback": "amigo",
+    "errorCrear": "Error al crear la meta",
+    "minimoInline": "Mínimo ${{min}} MXN",
+    "nombreDefault": "Retiro Principal"
+  },
+  "verificacion": {
+    "tituloIzq": "Verificación",
+    "descIzq": "Confirma tu identidad con el código de un solo uso que enviamos a tu dispositivo.",
+    "titulo": "Código de verificación",
+    "subtitulo": "Código de un solo uso · duración 3 minutos",
+    "instruccion": "Enviamos un código de 5 dígitos a tu {{medio}}, ingrésalo debajo para acceder.",
+    "medio": "número de teléfono",
+    "acceder": "Acceder",
+    "verificando": "Verificando...",
+    "reenviarEn": "Solicitar otro código en {{tiempo}} segundos",
+    "solicitarOtro": "Solicitar otro código",
+    "errorTitulo": "Error: datos incorrectos",
+    "errorCodigo": "El código ingresado no es válido. Verifica e intenta de nuevo.",
+    "regresar": "Regresar"
   },
   "errorBoundary": {
     "titulo": "Algo salió mal",
@@ -599,5 +860,249 @@
     "reintentar": "Reintentar",
     "volverInicio": "Volver al inicio",
     "detallesDev": "Detalles técnicos (solo en desarrollo)"
+  },
+  "goalCard": {
+    "principal": "Principal",
+    "editarMeta": "Editar meta",
+    "eliminarMeta": "Eliminar meta",
+    "saldo": "Saldo:",
+    "recienCreada": "(Recién creada)",
+    "progresoAria": "Progreso hacia la meta: {{pct}}%",
+    "ahorro": "Ahorro:",
+    "porMes": "/mes",
+    "meta": "Meta:",
+    "cerrar": "Cerrar",
+    "nombreLabel": "Nombre",
+    "ahorroMensualLabel": "Ahorro mensual (MXN)",
+    "montoObjetivoLabel": "Monto objetivo (MXN)",
+    "aniosRetiroLabel": "Años al retiro",
+    "cancelar": "Cancelar",
+    "guardando": "Guardando...",
+    "guardarCambios": "Guardar cambios",
+    "errorActualizar": "Error al actualizar",
+    "nuevaMeta": "Nueva meta",
+    "nombreMetaLabel": "Nombre de la meta",
+    "nombrePlaceholder": "Ej: Casa, Educación, Emergencia...",
+    "errorNombreRequerido": "El nombre es requerido",
+    "errorCrear": "Error al crear",
+    "creando": "Creando...",
+    "crearMeta": "Crear meta"
+  },
+  "perfilInfo": {
+    "regresar": "Regresar",
+    "tituloParte1": "Información",
+    "tituloParte2": "de tu",
+    "tituloParte3": "perfil",
+    "subtitulo": "Tus datos, seguros",
+    "descripcion": "Toda la información que compartes está protegida bajo los más altos estándares de seguridad.",
+    "foto": "Foto de perfil",
+    "seleccionarArchivo": "Seleccionar archivo",
+    "fotoAlt": "Vista previa de tu foto",
+    "nombreCompleto": "Nombre completo",
+    "nombre": "Nombre(s)*",
+    "apellidoPaterno": "Apellido paterno*",
+    "apellidoMaterno": "Apellido materno*",
+    "crearAcceso": "Crear acceso",
+    "telefono": "Número de teléfono*",
+    "correo": "Correo electrónico*",
+    "contrasena": "Contraseña*",
+    "confirmarContrasena": "Valida tu contraseña*",
+    "errorContrasena": "Las contraseñas no coinciden.",
+    "datosBancarios": "Datos bancarios",
+    "titular": "Nombre del titular*",
+    "banco": "Selecciona tu banco*",
+    "cuenta": "Número de tarjeta o CLABE*",
+    "beneficiario": "Beneficiario principal",
+    "beneficiarioNombre": "Nombre completo del beneficiario*",
+    "parentesco": "Parentesco*",
+    "beneficiarioTelefono": "Teléfono del beneficiario*",
+    "cambiar": "Cambiar"
+  },
+  "mainScreen": {
+    "weAre": "Somos",
+    "heroLine1Pre": "Tu",
+    "heroLine1Accent": "retiro,",
+    "heroLine1Post": "ya está",
+    "heroLine2Pre": "en tus",
+    "heroLine2Accent": "manos.",
+    "mainAccount": "Cuenta principal",
+    "cetesAsset": "Activo CETES",
+    "deposit": "Depositar",
+    "withdraw": "Retirar",
+    "goalPrefix": "Meta a",
+    "goalYears": "{{years}} años",
+    "estimatedTotal": "Total estimado:",
+    "learnMore": "Saber más",
+    "months": "meses",
+    "history": "Historial de transferencias",
+    "historyDeposit": "Depósito",
+    "historyEmergency": "Retiro de emergencia",
+    "hoursSuffix": "hr.",
+    "knowMore": "Conoce más",
+    "promoGetUpTo": "Recibe hasta el",
+    "promoOf": "de",
+    "promoYield": "rendimiento total",
+    "promoRest": "generado por tu ahorro constante.",
+    "emergencyQuestion": "¿Tienes una emergencia?",
+    "weUnderstand": "Te entendemos",
+    "emergencyText": "Conoce cómo tomar prestado hasta el 30% de tu ahorro."
+  },
+  "dataAccount": {
+    "titleLead": "Datos",
+    "titleAccent1": "bancarios y",
+    "titleAccent2": "beneficiarios",
+    "description": "Para poder manejar tus movimientos, ingresa una cuenta de débito personal y elige a tu beneficiario en caso de deceso.",
+    "back": "Regresar",
+    "mobileTitleLead": "Datos",
+    "mobileTitleAccent": "bancarios",
+    "mobileSubtitle": "Ingresa tu cuenta y elige a tu beneficiario.",
+    "cardTitle1": "Ingresa tu cuenta y",
+    "cardTitle2": "elige a tu beneficiario",
+    "bankDetails": "Datos bancarios",
+    "fullName": "Nombre completo",
+    "chooseBank": "Elige tu banco",
+    "cardOrClabe": "Tarjeta o cuenta CLABE",
+    "other": "Otro",
+    "beneficiary": "Beneficiario principal",
+    "beneficiaryName": "Nombre completo*",
+    "relationship": "Relación con la persona*",
+    "phone": "Número de teléfono*",
+    "hasAccountQuestion": "¿Tu beneficiario tiene cuenta de Mañana Seguro?",
+    "quickConnect": "Haz una conexión rápida.",
+    "continue": "Continuar",
+    "legal": "Toda la información es encriptada y tratada con respecto a las leyes mexicanas. Puedes cambiar de beneficiario más adelante.",
+    "relations": {
+      "spouse": "Cónyuge",
+      "child": "Hijo/a",
+      "father": "Padre",
+      "mother": "Madre",
+      "sibling": "Hermano/a",
+      "other": "Otro"
+    }
+  },
+  "deposits": {
+    "heroAccent": "Deposita",
+    "heroMid": "en",
+    "heroEnd": "segundos",
+    "cardTitle": "Haz crecer tu retiro en 2 sencillos pasos",
+    "step1": "1- Deposita la cantidad deseada en la siguiente cuenta",
+    "bank": "Banco",
+    "copy": "Copiar en portapapeles",
+    "copied": "¡Copiado!",
+    "step2": "2- Tu depósito será reflejado en unos minutos",
+    "supportPre": "(si tarda más de un día en reflejarse contacta a",
+    "supportLink": "Soporte Mañana Seguro",
+    "supportPost": ")",
+    "recentTitle": "Últimos movimientos",
+    "colDate": "Fecha de depósito",
+    "colAmount": "Cantidad de depósito",
+    "colStatus": "Estado",
+    "colBank": "Banco",
+    "hoursSuffix": "hr.",
+    "empty": "Sin movimientos aún",
+    "status": {
+      "processing": "En proceso",
+      "completed": "Completada",
+      "failed": "Fallida"
+    }
+  },
+  "signIn": {
+    "tagline1Pre": "Tu",
+    "tagline1Accent": "dinero,",
+    "tagline2Pre": "Tus",
+    "tagline2Accent": "reglas,",
+    "tagline3Pre": "Tu",
+    "tagline3Accent": "retiro",
+    "title": "Inicio de sesión",
+    "subtitle1": "Accede a tu cuenta,",
+    "subtitle2": "ingresa tu correo y contraseña",
+    "accountCreated": "Cuenta creada correctamente",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "recover": "Recuperar",
+    "loading": "Entrando...",
+    "continue": "Continuar",
+    "or": "o",
+    "google": "Continuar con Google",
+    "noAccount": "¿No tienes cuenta?",
+    "register": "Regístrate",
+    "terms1": "Al hacer clic en “Continuar” aceptas",
+    "terms2Pre": "los",
+    "termsLink": "términos y condiciones de uso",
+    "errors": {
+      "emptyFields": "Ingresa tu correo y contraseña.",
+      "invalidCredentials": "Correo o contraseña incorrectos."
+    }
+  },
+  "incentivos": {
+    "tituloParte1": "Programa de",
+    "tituloParte2": "incentivos",
+    "subtitulo": "Recibe una parte de todo tu esfuerzo.",
+    "descripcion": "Mañana Seguro te recompensa con un 5% de tu esfuerzo. Porque ahorrar no tiene que ser aburrido, cada 5 años te damos ese empujón que necesitas.",
+    "seleccionada": "Opción seleccionada",
+    "nota": "Una vez seleccionada, tendrás solo 1 mes para modificar la selección. Pasado ese tiempo no se podrá hacer ningún cambio.",
+    "fidelidad": {
+      "titulo": "Incentivo por fidelidad.",
+      "descripcion": "Opción 1: Tu reto es con tu futuro. Todos los 12 meses del año aporta a tu cuenta un mínimo de 5 dólares. Con tu constancia, tu incentivo pasará de 5% a 7%.",
+      "boton": "Seleccionar opción 1"
+    },
+    "confianza": {
+      "titulo": "Incentivo por confianza.",
+      "descripcion": "Opción 2: Tus seres queridos también necesitan un Mañana Seguro. Con unos cuantos clics haz que dos personas comiencen a ahorrar y pasa del 5% al 7% de incentivos.",
+      "boton": "Seleccionar opción 2"
+    }
+  },
+  "metaEstablecida": {
+    "tituloParte1": "Meta",
+    "tituloParte2": "establecida",
+    "cambiarMeta": "Cambiar meta",
+    "aviso": "Recuerda que solo se puede cambiar la meta 1 vez al año*",
+    "acepto": "Acepto los",
+    "terminos": "términos y condiciones de uso",
+    "tuMeta": "Tu meta es a:",
+    "totalFinal": "Total estimado al final de la meta",
+    "graficaLabel": "Proyección de crecimiento de tu ahorro",
+    "totalEstimado": "Total estimado:",
+    "botonCambiar": "Cambiar meta",
+    "anios_one": "{{count}} año",
+    "anios_other": "{{count}} años"
+  },
+  "authScreen": {
+    "tagline1Pre": "Tu",
+    "tagline1Accent": "dinero,",
+    "tagline2Pre": "Tus",
+    "tagline2Accent": "reglas,",
+    "tagline3Pre": "Tu",
+    "tagline3Accent": "retiro",
+    "title": "Regístrate",
+    "subtitle1": "Tener tu futuro en tus manos",
+    "subtitle2": "nunca había sido tan fácil",
+    "createWithEmail": "Crear cuenta con correo",
+    "terms1": "Al hacer clic en “Continuar” aceptas",
+    "terms2Pre": "los",
+    "termsLink": "términos y condiciones de uso"
+  },
+  "dataProfile": {
+    "titleLead": "Datos",
+    "titleAccent": "personales",
+    "intro": "Para poder crear tu cuenta necesitamos algunos datos personales.",
+    "secureTitle": "Tus datos, seguros",
+    "secureText": "Toda la información que compartes está protegida bajo los más altos estándares de seguridad.",
+    "fastTitle": "Proceso rápido",
+    "fastText": "Completa tu registro en menos de 3 minutos y accede a todos los beneficios de tu cuenta.",
+    "formTitle": "Regístrate en minutos",
+    "fullName": "Nombre completo",
+    "firstName": "Nombre(s)*",
+    "paternalName": "Apellido paterno*",
+    "maternalName": "Apellido materno*",
+    "createAccess": "Crear acceso",
+    "email": "Correo electrónico*",
+    "password": "Contraseña*",
+    "confirmPassword": "Confirma tu contraseña*",
+    "processing": "Procesando...",
+    "continue": "Continuar",
+    "privacyPre": "Puedes revisar cómo tratamos y resguardamos tus datos conforme a lo establecido en la ley",
+    "privacyLink": "aquí"
   }
 }

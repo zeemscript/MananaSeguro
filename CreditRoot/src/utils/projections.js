@@ -1,6 +1,6 @@
 import { MANANA_SEGURO_RATES, INCENTIVE_SCENARIOS } from '../data/retirementContent'
 
-// ─── Proyección base con tasa del usuario (4.7%) ─────────────────────────────
+// Proyección base con tasa del usuario (4.7%)
 export function calculateRetirementProjection({
   monthlyDepositUsd,
   yearsToRetirement,
@@ -33,7 +33,7 @@ export function calculateRetirementProjection({
   }
 }
 
-// ─── Simulación por ciclos de 5 años (lógica exacta del doc) ─────────────────
+// Simulación por ciclos de 5 años (lógica exacta del doc)
 export function calculateCycles(monthlyDepositUsd, totalYears, userRate, incentivePct) {
   const cycles = Math.floor(totalYears / 5)
   let balance = 0
@@ -90,32 +90,37 @@ function calculateTotalIncentives(monthlyDeposit, years, rate, incentivePct) {
   return cycles.reduce((sum, c) => sum + c.incentiveAmount, 0)
 }
 
-// ─── Simulador de autopréstamo ────────────────────────────────────────────────
+// Simulador de autopréstamo
 export function calculateLoan(lockedBalance, requestedAmount) {
   const maxLoan = lockedBalance * MANANA_SEGURO_RATES.loanMaxPct
   const amount = Math.min(requestedAmount, maxLoan)
   const months = MANANA_SEGURO_RATES.loanMaxMonths
-  const monthlyFeeRate = MANANA_SEGURO_RATES.loanMonthlyFee / 100
+  const stroopsPerUsdc = 10_000_000
+  const monthlyFeeBps = MANANA_SEGURO_RATES.loanMonthlyFee * 100
+  const amountStroops = Math.round(amount * stroopsPerUsdc)
 
-  let balance = amount
+  let balanceStroops = amountStroops
   const schedule = []
-  let totalFees = 0
+  let totalFeesStroops = 0
 
   for (let m = 1; m <= months; m++) {
-    const fee = balance * monthlyFeeRate
-    const principal = amount / months
-    const payment = principal + fee
-    totalFees += fee
-    balance -= principal
+    const monthsRemaining = months - m + 1
+    const principalStroops = Math.floor(balanceStroops / monthsRemaining)
+    const feeStroops = Math.floor(balanceStroops * monthlyFeeBps / 10_000)
+    const paymentStroops = principalStroops + feeStroops
+    totalFeesStroops += feeStroops
+    balanceStroops -= principalStroops
 
     schedule.push({
       month: m,
-      payment: payment,
-      fee,
-      principal,
-      remaining: Math.max(0, balance),
+      payment: paymentStroops / stroopsPerUsdc,
+      fee: feeStroops / stroopsPerUsdc,
+      principal: principalStroops / stroopsPerUsdc,
+      remaining: Math.max(0, balanceStroops) / stroopsPerUsdc,
     })
   }
+
+  const totalFees = totalFeesStroops / stroopsPerUsdc
 
   return {
     amount,
@@ -127,7 +132,7 @@ export function calculateLoan(lockedBalance, requestedAmount) {
   }
 }
 
-// ─── Ingresos de la plataforma con Carlos ────────────────────────────────────
+// Ingresos de la plataforma con Carlos
 export function calculatePlatformRevenue(monthlyDeposit, years, platformRate = 1.0) {
   const monthlyRate = platformRate / 100 / 12
   let balance = 0

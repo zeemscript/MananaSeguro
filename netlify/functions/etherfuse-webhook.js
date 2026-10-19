@@ -5,6 +5,9 @@
 import { createClient } from '@supabase/supabase-js'
 import { createHmac, timingSafeEqual } from 'crypto'
 import { createLogger, errorBody } from './_lib/logger.js'
+import { canTransition } from './_lib/orderStateMachine.js'
+import { ejecutarIntent, IntentError } from './_lib/soroban.js'
+
 
 //  Constantes 
 
@@ -13,7 +16,7 @@ const CORS_HEADERS = {
   'Content-Type': 'application/json',
 }
 
-//  Verificación de firma HMAC-SHA256 
+//  Verificación de firma HMAC-SHA256  
 
 /**
  * Verifica la firma del webhook de Etherfuse.
@@ -84,7 +87,7 @@ async function handleKycUpdated(payload, supabase, log) {
  * Cuando es 'completed', el usuario ya tiene sus CETES en Stellar.
  */
 async function handleOrderUpdated(payload, supabase, log) {
-  const { orderId, status, stellarClaimTransaction } = payload
+  const { orderId, updatedAt, amountInFiat, amountInTokens, status, stellarClaimTransaction, confirmedTxSignature } = payload;
 
   if (!orderId) {
     log.warn('order_updated sin orderId')
@@ -93,29 +96,76 @@ async function handleOrderUpdated(payload, supabase, log) {
 
   const updates = {
     status,
-    updated_at: new Date().toISOString(),
+    updated_at: updatedAt,
   }
 
-  // Si hay una transacción de claim pendiente (wallet nueva), guardarla
-  // El frontend la firmará con la llave custodial del usuario
+  const { data: ordenExistente, error } = await supabase
+    .from('ordenes')
+    .select('order_id, updated_at, status, usuario_id')  // ← agregué usuario_id, lo necesitas abajo
+    .eq('order_id', orderId)
+    .limit(1)
+    .single()
+
   if (stellarClaimTransaction) {
     updates.stellar_claim_transaction = stellarClaimTransaction
   }
 
-  const { error } = await supabase
-    .from('ordenes')
-    .update(updates)
-    .eq('order_id', orderId)
+  const esDuplicado = ordenExistente && status == ordenExistente.status && updatedAt == ordenExistente.updated_at
 
-  if (error) {
-    log.error('Error actualizando orden', { orderId, detail: error.message })
+  if (esDuplicado) {
+    log.info('Duplicado detectado, ignorando', { orderId })
   } else {
-    log.info('Orden actualizada', { orderId, status })
+    const estadoActual = ordenExistente?.status ?? null
 
-    // TODO cuando status === 'completed':
-    // 1. Si hay stellarClaimTransaction → firmarla con la llave custodial
-    //    y enviarla a Stellar para que el usuario reciba sus CETES
-    // 2. Notificar al usuario (push notification, email, etc.)
+    if (!canTransition(estadoActual, status)) {
+      log.warn('Transición inválida rechazada', { orderId, desde: estadoActual, hacia: status })
+      return
+    }
+
+    const { error } = await supabase.from('ordenes').update(updates).eq('order_id', orderId)
+
+    if (error) {
+      log.error('Error actualizando orden', { orderId, detail: error.message })
+    } else {
+      log.info('Orden actualizada', { orderId, status })
+    }
+
+    if (status === 'completed') {
+      const usuarioId = ordenExistente?.usuario_id
+
+      if (!usuarioId) {
+        log.error('Orden sin usuario_id, no se puede acreditar', { orderId })
+        return
+      }
+
+      const { data: usuario, error: errorUsuario } = await supabase
+        .from('usuarios')
+        .select('*')
+        .eq('id', usuarioId)
+        .single()
+
+      if (errorUsuario || !usuario) {
+        log.error('Usuario no encontrado para acreditar', { orderId, usuarioId })
+        return
+      }
+
+      try {
+        const { hash } = await ejecutarIntent(
+          { type: 'deposit', amountUsdc: amountInTokens, lockYears: usuario.lock_years_default ?? 5 },
+          usuario
+        )
+
+        await supabase
+          .from('ordenes')
+          .update({ stellar_tx_hash: hash })
+          .eq('order_id', orderId)
+
+        log.info('Depósito acreditado en Stellar', { orderId, hash })
+      } catch (err) {
+        const codigo = err instanceof IntentError ? err.code : 'INTERNAL'
+        log.error('Fallo al acreditar en Stellar', { orderId, codigo, detail: err.message })
+      }
+    }
   }
 }
 
@@ -151,7 +201,7 @@ export async function handler(event) {
 
   // Verificar contra ambos secrets — cada eventType tiene el suyo
   const firmaValida = verificarFirma(bodyRaw, firma, secreto1) ||
-                      (secreto2 && verificarFirma(bodyRaw, firma, secreto2))
+    (secreto2 && verificarFirma(bodyRaw, firma, secreto2))
 
   if (!firmaValida) {
     log.warn('Firma inválida — posible request no autorizado')
